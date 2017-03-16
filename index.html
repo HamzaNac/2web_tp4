@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <title>Ex2</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="materialize/css/materialize.css">
+    <script src="materialize/js/materialize.js"></script>
     <script>
         $(document).ready(function(){
-            $("button").click(function(){
+            $("a.btn").click(function(){
                 $.ajax({
                     type:'POST',
                     url :'server.php',
-                    data : {val :this.value}
+                    data : {val :this.name}
 
                 })
                 .done(function( msg ) {
@@ -21,12 +23,12 @@
     </script>
 </head>
 <body>
-<button type="button" value="SAMI">SAMI</button>
-<button type="button" value="HAMZA">HAMZA</button>
-<button type="button" value="HTML">HTML</button>
-<button type="button" value="JS">JS</button>
-<button type="button" value="JQUERRY">JQUERRY</button>
-<button type="button" value="AJAX">AJAX</button>
+<a class="waves-effect waves-light btn"  type="button" name="SAMI">SAMI</a>
+<a class="waves-effect waves-light btn" type="button" name="HAMZA">HAMZA</a>
+<a class="waves-effect waves-light btn" type="button" name="HTML">HTML</a>
+<a class="waves-effect waves-light btn" type="button" name="JS">JS</a>
+<a class="waves-effect waves-light btn" type="button" name="JQUERRY">JQUERRY</a>
+<a class="waves-effect waves-light btn" type="button" name="AJAX">AJAX</a>
 
 </body>
 
